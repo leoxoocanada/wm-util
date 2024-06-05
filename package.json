@@ -1,6 +1,6 @@
 {
   "name": "wm-util",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "wm前端工具集",
   "main": "lib/index.js",
   "type": "module",
@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "build": "rimraf lib && rollup -c",
+    "pub": "npm publish --registry https://registry.npmjs.org",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
