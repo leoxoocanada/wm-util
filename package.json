@@ -2,9 +2,18 @@
   "name": "wm-util",
   "version": "0.1.0",
   "description": "wm前端工具集",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "type": "module",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "keywords": [
+    "frontend",
+    "utils"
+  ],
   "scripts": {
-    "build": "rimraf lib && rollup -c ./scripts/rollup.config.mjs",
+    "build": "rimraf lib && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,6 +42,7 @@
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-serve": "^1.1.1",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-visualizer": "^5.12.0",
     "tslib": "^2.6.3",
     "typescript": "^5.4.5"
