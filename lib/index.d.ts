@@ -6,7 +6,7 @@
  * @param options.isBase64 是否是base64
  * @param options.mimeType 文件类型
  */
-export declare const downloadFile: (content: string, filename: string, options: {
-    mimeType: string;
-    isBase64: boolean;
+export declare const downloadFile: (content: string, filename?: string, options?: {
+    mimeType?: string;
+    isBase64?: boolean;
 }) => void;

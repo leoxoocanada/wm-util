@@ -8,13 +8,16 @@ import { base64ToBlob } from "./utils";
  * @param options.isBase64 是否是base64
  * @param options.mimeType 文件类型
  */
-export const downloadFile = (content: string, filename: string, options: { mimeType: string; isBase64: boolean }): void => {
-  const { mimeType, isBase64 } = options;
+export const downloadFile = (content: string, filename?: string, options?: { mimeType?: string; isBase64?: boolean }): void => {
+  const { mimeType, isBase64 } = options || {
+    mimeType: 'text/plain',
+    isBase64: false
+  };
   const blob = isBase64 ? base64ToBlob(content, mimeType) : new Blob([content], { type: mimeType });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = filename;
+  a.download = filename || 'download';
   a.click();
   URL.revokeObjectURL(url);
 }
