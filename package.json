@@ -4,6 +4,7 @@
   "description": "wm前端工具集",
   "main": "lib/index.js",
   "type": "module",
+  "types": "lib/index.d.ts",
   "files": [
     "lib",
     "README.md"
